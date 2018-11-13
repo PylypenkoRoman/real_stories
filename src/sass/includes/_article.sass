@@ -1,0 +1,211 @@
+.article
+  box-sizing: border-box
+  padding: 112px 0 157px
+  background: $dark-gray
+  @include respond-to(tablet-portrait)
+    padding: 100px 0 70px
+  &__title
+    margin: 0 0 60px
+    color: #fff
+    text-align: center
+    @include respond-to(mobile-landscape)
+      margin: 0 0 30px
+  &__sub-title
+    color: #fff
+    margin: 30px 0
+    position: relative
+    @include respond-to(mobile-landscape)
+      margin: 21px 0
+  &__add-text
+    position: absolute
+    font-size: 14px
+    text-transform: uppercase
+    color: $turquoise
+    left: 3px
+    top: -5px
+    @include respond-to(tablet-landscape)
+      font-size: 10px
+      top: -2px
+    @include respond-to(tablet-portrait)
+      font-size: 14px
+      top: 0
+    @include respond-to(mobile-portrait)
+      font-size: 12px
+      margin-bottom: 20px
+      display: block
+      position: static
+      left: 0
+  &__in
+    margin: 0 auto
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: flex-start
+    box-sizing: border-box
+    flex-direction: column
+    padding: 0 35px
+
+    @include respond-to(mobile-landscape)
+      padding: 0 15px
+    > *
+      flex: 1 1 100%
+    >img
+      display: block
+      width: 100%
+      height: auto
+      margin: 90px 0
+      @include respond-to(tablet-portrait)
+        margin: 60px 0
+      @include respond-to(mobile-landscape)
+        margin: 30px 0
+    ul, ol
+      margin: 0 auto 50px
+      padding: 0
+
+    p, h1, h2, h3, h4, h5, h6, ul, li, ol
+      color: #fff
+      width: 630px
+      text-align: left
+      @include respond-to(tablet-landscape)
+        width: 554px
+      @include respond-to(tablet-portrait)
+        width: 100%
+      @include respond-to(mobile-portrait)
+    p, ol, ul
+      margin: 0 auto
+      margin-bottom: 50px
+      padding-left: 115px
+      box-sizing: border-box
+      @include respond-to(tablet-landscape)
+        padding-left: 82px
+      @include respond-to(tablet-portrait)
+        padding-left: 120px
+      @include respond-to(mobile-landscape)
+        padding-left: 0
+      @include respond-to(mobile-portrait)
+        margin-bottom: 35px
+    p, li
+      @extend %common-text
+      @include respond-to(mobile-landscape)
+        width: 100%
+    p
+      margin-bottom: 30px
+      position: relative
+    li
+      list-style: none
+      margin-bottom: 20px
+      position: relative
+      top: 12px
+      padding-left: 30px
+      box-sizing: border-box
+      &:last-child
+        margin-bottom: 0
+      &:before
+        position: absolute
+        content: ""
+    ul li
+      &:before
+        position: absolute
+        content: ""
+        background: $turquoise
+        font-size: 14px
+        top: 12px
+        left: 0
+        width: 7px
+        height: 7px
+        border-radius: 50%
+    ol
+      counter-reset: item
+      list-style-type: none
+    ol li:before
+      content: counter(item, decimal-leading-zero) " "
+      counter-increment: item
+      color: $turquoise
+      font-size: 14px
+      position: absolute
+      line-height: 1
+      top: 7px
+      left: 0
+    > a, > p a
+      color: $turquoise
+    .turquoise
+      color: $turquoise
+
+    h1
+      font-size: 80px
+      margin: 0 auto 46px
+      line-height: 1.1
+      font-family: 'QanelasHeavy', sans-serif
+      @include respond-to(tablet-landscape)
+        font-size: 65px
+        margin: 0 0 35px
+      @include respond-to(tablet-portrait)
+        font-size: 55px
+      @include respond-to(mobile-portrait)
+        font-size: 30px
+    h2
+      font-size: 60px
+      line-height: 1.1
+      font-family: 'QanelasHeavy', sans-serif
+      @include respond-to(tablet-portrait)
+        font-size: 55px
+      @include respond-to(mobile-portrait)
+        font-size: 27px
+    h3
+      font-size: 50px
+      line-height: 1.1
+      @include respond-to(tablet-portrait)
+        font-size: 40px
+      @include respond-to(mobile-portrait)
+        font-size: 25px
+    h4
+      font-size: 40px
+      line-height: 1.1
+      @include respond-to(tablet-portrait)
+        font-size: 25px
+      @include respond-to(mobile-portrait)
+        font-size: 22px
+    h5
+      font-size: 30px
+      line-height: 1.1
+      @include respond-to(tablet-portrait)
+        font-size: 22px
+      @include respond-to(mobile-portrait)
+        font-size: 18px
+    h6
+      font-size: 26px
+      line-height: 1.1
+      @include respond-to(tablet-portrait)
+        font-size: 20px
+      @include respond-to(mobile-portrait)
+        font-size: 16px
+
+.article__small-img-wrapper
+  display: flex
+  justify-content: space-between
+  width: 100%
+  @include respond-to(mobile-landscape)
+    flex-direction: column
+.article__img-small
+  margin: 0 auto 156px 0
+  flex: 0 0 49%
+  width: 49%
+  height: 100%
+  display: block
+  @include respond-to(tablet-landscape)
+    margin: 0 auto 106px 0
+  @include respond-to(tablet-portrait)
+    margin: 0 auto 65px 0
+  @include respond-to(mobile-landscape)
+    margin: 25px 0
+    width: 100%
+    flex: 1 1 100%
+.article__img-small + .article__img-small
+  margin: 156px 0 75px auto
+  @include respond-to(tablet-landscape)
+    margin: 106px 0 75px auto
+  @include respond-to(tablet-portrait)
+    margin: 65px 0 30px auto
+  @include respond-to(mobile-landscape)
+    margin: 30px 0
+

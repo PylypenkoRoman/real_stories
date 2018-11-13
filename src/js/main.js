@@ -1,0 +1,11 @@
+//= partials/jquery.js
+//= partials/jquery.carouFredSel-6.2.1.js
+//= partials/likely.js
+//= partials/svgxuse.js
+//= partials/jquery.vide.js
+//= partials/TweenMax.min.js
+//= partials/ScrollMagic.js
+//= partials/animation.gsap.js
+//= partials/debug.addIndicators.js
+//= partials/animation.js
+//= partials/scripts.js

@@ -1,0 +1,132 @@
+.feedback
+  z-index: 10
+  position: fixed
+  padding: 20px 46px
+  box-sizing: border-box
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  background: rgba(0, 0, 0, 0.95)
+  overflow: hidden
+  height: 100%
+  transition: 0.4s
+  visibility: hidden
+  opacity: 0
+  @include respond-to(tablet-landscape)
+    padding: 20px 20px 20px 15px
+  @include respond-to(tablet-portrait)
+    padding: 0
+  &.open
+    visibility: visible
+    opacity: 1  
+  &__close-btn
+    @extend %circled-button
+    border-radius: 50%
+    background: $orange
+    width: 46px
+    height: 46px
+    display: flex
+    align-items: center
+    justify-content: center
+    position: absolute
+    top: -23px
+    right: -23px
+    cursor: pointer
+    @include respond-to(tablet-portrait)
+      top: 20px
+      right: 20px
+    svg
+      color: #000
+  &__holder
+    box-sizing: border-box
+    height: 674px
+    position: relative
+    padding: 55px 20px 20px
+    box-sizing: border-box
+    max-width: 950px
+    display: flex
+    background: #fff
+    flex-direction: column
+    display: flex
+    flex: 1 1 950px
+    @include respond-to(tablet-portrait)
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      width: 100%
+      max-width: 100%
+      height: 100%
+  &__title
+    margin: 0 auto 19px
+    color: #060606
+    font-size: 60px
+    text-align: center
+    @include respond-to(mobile-landscape)
+      font-size: 38px
+  &__text
+    font-size: 20px
+    color: #060606
+    line-height: 26px
+    max-width: 512px
+    margin: 0 auto 52px
+    text-align: center
+    @include respond-to(mobile-landscape)
+      margin: 0 auto 40px
+      font-size: 18px
+      line-height: 22px
+  &__form
+    max-width: 440px
+    margin: 0 auto
+    width: 100%
+    flex-direction: column
+    display: flex
+    align-items: center
+    .button
+      margin-top: 36px
+      width: 248px
+      @include respond-to(mobile-landscape)
+        margin-top: 26px
+  &__textarea-wrapper 
+    position: relative
+    width: 100%
+    margin-bottom: 30px    
+  &__textarea 
+    width: 100%
+    font-size: 24px
+    display: block
+    border: 0
+    height: 112px
+    line-height: 38px
+    outline: none
+    color: rgba(0,0,0, 0.9)
+    border-bottom: 1px solid rgba(0,0,0, 0.3)
+    &::placeholder
+      color: rgba(0,0,0, 0.3)
+    @include respond-to(mobile-landscape)
+        font-size: 20px 
+        line-height: 30px
+        height: 86px
+        margin-bottom: 20px
+  &__input
+    width: 100%
+    font-size: 24px
+    display: block
+    border: 0
+    outline: none
+    color: rgba(0,0,0, 0.9)
+    border-bottom: 1px solid rgba(0,0,0, 0.3)
+    margin-bottom: 30px
+    &::placeholder
+        color: rgba(0,0,0, 0.3)
+    @include respond-to(mobile-landscape)
+        font-size: 20px
+        line-height: 30px
+        margin-bottom: 20px
+  &__btn 
+    svg
+      color: #fff              

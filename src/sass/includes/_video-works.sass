@@ -1,0 +1,135 @@
+.video-works
+  box-sizing: border-box
+  padding: 65px 0 35px
+  background: $light-gray
+  &__in
+    box-sizing: border-box
+    display: flex
+    flex-wrap: wrap
+    max-width: 1366px
+    padding: 0 60px
+    margin: 0 auto
+    @include respond-to(tablet-landscape)
+      padding: 0 35px
+    @include respond-to(tablet-portrait)
+      justify-content: center
+      align-items: center
+      padding: 0 15px
+  &__title
+    text-align: center
+    position: relative
+    margin: 0 0 78px
+    color: #dcdcdc
+    @extend %section-title
+    @include respond-to(tablet-landscape)
+      margin: 0 0 50px
+  &__sub-text
+    font-size: 18px
+    color: #fff
+    font-family: 'HarmoniaSansProCyrBold', sans-serif
+  &__item
+    padding-bottom: 45px
+    padding-left: 85px
+    position: relative
+    box-sizing: border-box
+    flex: 1 1 50%
+    max-width: 50%
+    @include respond-to(tablet-landscape)
+      padding-left: 45px
+      padding-top: 35px
+    @include respond-to(tablet-portrait)
+      padding: 0 0 0 30px
+      flex: 1 1 100%
+      max-width: 740px
+      margin-bottom: 40px
+    &:nth-child(even)
+      padding-top: 65px
+      padding-left: 97px
+      @include respond-to(tablet-landscape)
+        padding-top: 65px
+        padding-left: 47px
+      @include respond-to(tablet-portrait)
+        padding: 0 0 0 30px
+    &:nth-child(odd)
+      padding-right: 12px
+      @include respond-to(tablet-portrait)
+        padding: 0 0 0 30px
+    &:hover
+      cursor: pointer
+      .video-works__play-button
+        background: $turquoise
+        svg
+          color: #fff
+  &__wrapper
+    display: block
+    overflow: hidden
+    position: relative
+  &__image
+    width: 100%
+    height: auto
+    min-height: 100%
+    min-width: 100%
+    position: relative
+    display: block
+  &__time
+    width: 100px
+    height: 50px
+    background: #fff
+    position: absolute
+    bottom: 0
+    right: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 18px
+    color: #1f1f1f
+    @include respond-to(tablet-portrait)
+      width: 80px
+      height: 40px
+      font-size: 14px
+  &__play-button
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    background: #fff
+    position: absolute
+    top: 50%
+    left: 50%
+    margin-left: -25px
+    margin-top: -25px
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: 0.4s
+    svg
+      color: #000
+      position: relative
+      right: -2px
+      font-size: 10px
+      transition: 0.4s
+    @include respond-to(tablet-portrait)
+      width: 40px
+      height: 40px
+      svg
+        font-size: 8px
+  &__holder
+    position: relative
+  &__video
+    width: 100%
+    border: 0
+    height: 290px
+    @include respond-to(tablet-portrait)
+      height: 400px
+    @include respond-to(mobile-landscape)
+      height: 300px
+    @include respond-to(mobile-portrait)
+      height: 220px
+  &__label
+    position: absolute
+    width: 160px
+    transform: rotate(-90deg)
+    text-align: right
+    left: -94px
+    top: 70px
+
+

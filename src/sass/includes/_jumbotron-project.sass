@@ -1,0 +1,162 @@
+.jumbotron-project
+  display: flex
+  justify-content: space-between
+  height: 700px
+  box-sizing: border-box
+  background: $light-gray
+  @include respond-to(tablet-portrait)
+    flex-direction: column
+    height: auto
+  &__view
+    flex: 1 1 55%
+    overflow: hidden
+    @include respond-to(tablet-portrait)
+      flex: 1 1 auto
+      height: 450px
+    @include respond-to(mobile-landscape)
+      height: 333px
+    .map
+      height: 100%
+  &__img
+    min-height: 100%
+    height: auto
+    width: auto
+    min-width: 100%
+    position: relative
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+  &__content
+    flex: 1 1 55%
+    background: $dark-gray
+    padding: 42px 11px 36px 62px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    box-sizing: border-box
+    @include respond-to(tablet-portrait)
+      flex: 1 1 auto
+      padding: 34px 30px 40px
+    @include respond-to(mobile-landscape)
+      padding: 34px 15px 30px
+  &__title
+    color: #fff
+    font-size: 65px
+    margin: 0 0 30px
+    line-height: 1.1
+    font-family: 'QanelasHeavy', sans-serif
+    @include respond-to(tablet-portrait)
+      font-size: 55px
+    @include respond-to(mobile-portrait)
+      font-size: 27px
+  &__all-btn
+    text-decoration: none
+    text-transform: uppercase
+    color: rgba(255, 255, 255, 0.2)
+    font-size: 14px
+    margin-bottom: 93px
+    display: inline-flex
+    align-items: center
+    z-index: 5
+    transition: 0.4s
+    cursor: pointer
+    position: relative
+    @include respond-to(tablet-portrait)
+      margin: 0 0 15px
+    svg
+      margin-right: 10px
+      position: relative
+      top: -3px
+      transition: 0.4s
+      color: rgba(255,255,255,.2)
+    &:hover
+      color: $turquoise
+      svg
+        color: $turquoise
+    @include respond-to(mobile-landscape)
+      font-size: 12px
+  &__row
+    display: flex
+    align-items: center
+    margin-bottom: 32px
+    @include respond-to(mobile-portrait)
+      margin-bottom: 12px
+    &:last-child
+      margin-bottom: 0
+  &__label
+    color: rgba(255, 255, 255, 0.2)
+    font-size: 12px
+    display: block
+    margin-right: 34px
+  &__text
+    color: $turquoise
+    font-size: 18px
+    font-family: 'HarmoniaSansProCyrBold', sans-serif
+  &__next-btn
+    background: #fff
+    display: flex
+    border-radius: 50%
+    align-items: center
+    justify-content: center
+    @extend %circled-button
+    svg
+      color: #000
+      font-size: 16px
+      @include respond-to(mobile-landscape)
+        font-size: 14px
+  &__footer
+    display: flex
+    margin-top: 20px
+    justify-content: space-between
+    @include respond-to(tablet-portrait)
+      margin-top: 30px
+  .social-media__item + .social-media__item
+    margin-left: 4px
+  .social-media__item
+    background: transparent
+    @include respond-to(mobile-landscape)
+      display: none
+    svg
+      color: #fff
+    &:hover
+      background: $orange
+      svg
+        color: #000
+
+.jumbotron-project.jumbotron-contacts
+  .jumbotron-project__content
+    justify-content: flex-start
+    position: relative
+    padding: 34px 32px 36px 62px
+    @include respond-to(tablet-portrait)
+      padding: 34px 30px 80px
+    @include respond-to(mobile-landscape)
+      padding: 34px 15px 30px
+  .contacts__title
+    width: auto
+    margin: 0 0 45px
+    font-size: 50px
+    line-height: 1.2
+    @include respond-to(tablet-portrait)
+      font-size: 40px
+    @include respond-to(mobile-portrait)
+      font-size: 25px
+  .contacts__list
+    width: auto
+    margin: 0
+    @include respond-to(mobile-landscape)
+      margin: 0 0 30px
+  .social-media
+    margin-bottom: 70px
+    @include respond-to(tablet-portrait)
+      margin-bottom: 25px
+  .social-media__item   
+    z-index: 5 
+  .copyright
+    position: absolute
+    left: 61px
+    bottom: 27px
+    @include respond-to(tablet-portrait)
+      left: 30px
+    @include respond-to(mobile-landscape)
+      position: static

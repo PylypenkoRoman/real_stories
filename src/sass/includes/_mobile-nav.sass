@@ -1,0 +1,98 @@
+.mobile-nav
+  width: 730px
+  position: fixed
+  top: 0
+  bottom: 0
+  right: 0
+  left: auto
+  box-sizing: border-box
+  background: #151515
+  flex-direction: column
+  align-items: center
+  z-index: 10
+  justify-content: center
+  transition: 0.4s
+  display: flex
+  transform: translateX(730px)
+  @include respond-to(mobile-landscape)
+    width: 100%
+    transform: translateX(100%)
+    padding-top: 108px
+    padding-bottom: 65px
+    justify-content: space-between
+  &.open
+    transform: translateX(0)
+  &__close-btn
+    @extend %circled-button
+    top: 20px
+    right: 20px
+    background: $orange
+    display: flex
+    border-radius: 50%
+    align-items: center
+    justify-content: center
+    position: absolute
+    cursor: pointer
+    svg
+      font-size: 20px
+      color: #000
+      @include respond-to(mobile-portrait)
+        font-size: 12px
+    &:hover
+      animation: 0.4s ease-in-out hover-scale
+  &__list
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+  &__item
+    font-size: 20px
+    padding: 10px
+    margin-bottom: 20px
+    text-transform: uppercase
+    text-align: center
+    color: #fff
+    display: flex
+    align-items: center
+    letter-spacing: 0.025em
+    text-decoration: none
+    cursor: pointer
+    &:hover
+      color: $turquoise
+      svg
+        color: $turquoise
+
+    @include respond-to(mobile-landscape)
+      margin-bottom: 2px
+      font-size: 16px
+    &:last-child
+      margin-bottom: 0
+    svg
+      color: #fff
+      margin-right: 4px
+      margin-top: -1px
+  .social-media
+    display: none
+    margin-bottom: 10px
+    @include respond-to(mobile-landscape)
+      display: flex
+      margin-bottom: 0
+      &__item
+        @include respond-to(mobile-landscape)
+          font-size: 15px
+          width: 30px
+          height: 30px
+    .social-media__item+.social-media__item
+      @include respond-to(mobile-landscape)
+        margin-left: 15px
+  .language
+    position: absolute
+    width: 160px
+    left: 50%
+    margin-left: -80px
+    display: flex
+    justify-content: center
+    align-items: center
+    bottom: 20px
+
+

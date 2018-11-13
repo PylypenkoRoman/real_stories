@@ -1,0 +1,90 @@
+.jumbotron
+  display: flex
+  align-items: center
+  justify-content: center
+  position: relative
+  box-sizing: border-box
+  padding-bottom: 12px
+  overflow: hidden
+  &__title
+    margin: 0
+    text-align: center
+    @extend %section-title
+  &__bottom-lines
+    height: 12px
+    position: absolute
+    left: 0
+    bottom: 0
+    right: 0
+    &:after, &:before
+      content: ""
+      position: absolute
+      height: 12px
+      background: $light-gray
+    &:before
+      bottom: 0
+      right: 50%
+      margin-right: 12px
+      left: 0
+    &:after
+      bottom: 0
+      left: 50%
+      margin-left: 12px
+      right: 0
+  &__bottom-corners
+    content: ""
+    position: absolute
+    width: 0
+    height: 0
+    left: 50%
+    margin-left: -12px
+    bottom: -12px
+    border-left: 12px solid $light-gray
+    border-right: 12px solid $light-gray
+    border-bottom: 12px solid $light-gray
+    border-top: 12px solid transparent
+
+.jumbotron_dark-decor
+  .jumbotron__bottom-lines
+    &:after, &:before
+      background: #1f1f1f
+  .jumbotron__bottom-corners
+    border-left: 12px solid $dark-gray
+    border-right: 12px solid $dark-gray
+    border-bottom: 12px solid $dark-gray
+    border-top: 12px solid transparent
+
+.jumbotron_projects
+  height: 230px
+  background: $light-gray
+  .jumbotron__title
+    color: #000
+    @extend %section-title
+
+.jumbotron_search-results
+  height: 230px
+  background: $light-gray
+  .jumbotron__title
+    color: #000
+    @extend %section-title
+
+.jumbotron_team
+  height: 465px
+  background-repeat: no-repeat
+  background-image: url("../img/jumbotron_team.jpg")
+  background-position: center center
+  background-size: cover
+  .jumbotron__title
+    color: #fff
+    @extend %section-title
+
+.jumbotron_press
+  height: 462px
+  background-repeat: no-repeat
+  background-image: url("../img/jumbotron_press.jpg")
+  background-position: center center
+  background-size: cover
+  .jumbotron__title
+    color: #fff
+    @extend %section-title
+

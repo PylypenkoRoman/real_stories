@@ -1,0 +1,78 @@
+.partners
+  background: $dark-gray
+  padding: 107px 30px 180px
+  box-sizing: border-box
+  @include respond-to(desktop)
+    padding: 107px 30px 137px
+  @include respond-to(tablet-portrait)
+    padding: 86px 30px 103px
+  @include respond-to(mobile-landscape)
+    padding: 63px 15px 73px
+  &__title
+    @extend %section-title
+    color: #fff
+    margin: 0 auto 55px
+    max-width: 625px
+    text-align: left
+    position: relative
+    left: -4px
+    @include respond-to(desktop)
+      width: 470px
+      left: -2px
+    @include respond-to(tablet-portrait)
+      margin: 0 0 55px
+      width: auto
+      left: 0
+    @include respond-to(mobile-landscape)
+      margin: 0 auto 36px
+      text-align: center
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+    max-width: 1295px
+    margin: 0 auto 20px
+    @include respond-to(mobile-landscape)
+      margin: 0
+  &__item
+    flex: 1 1 33%
+    box-sizing: border-box
+    padding: 23px 12px 0
+    margin-bottom: 30px
+    display: flex
+    align-items: center
+    position: relative
+    @include respond-to(mobile-landscape)
+      flex: 1 1 100%
+      margin-bottom: 0
+      padding: 20px 0
+    &:before
+      content: ""
+      height: 1px
+      left: 12px
+      right: 12px
+      background: $middle-gray
+      position: absolute
+      top: 0
+  &__logo-img
+    max-width: 100%
+    @include respond-to(desktop)
+      max-height: 120px
+    @include respond-to(mobile-landscape)
+      max-height: 80px
+      margin: 0 auto
+  &__text-block
+    width: 625px
+    margin: 20px auto 0
+    box-sizing: border-box
+    @include respond-to(desktop)
+      width: 470px
+    @include respond-to(tablet-portrait)
+      width: auto
+      margin: 20px 0 0
+  &__text
+    @extend %common-text
+    color: #fff
+    margin: 0 0 36px
+    @include respond-to(mobile-landscape)
+      margin: 0 0 25px

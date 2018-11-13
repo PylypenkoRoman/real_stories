@@ -1,0 +1,93 @@
+.press
+  padding: 80px 0 0
+  box-sizing: border-box
+  background: $light-gray
+  @include respond-to(mobile-portrait)
+      padding: 30px 0 0
+  &__title
+    width: 625px
+    margin: 0 auto 52px
+    @extend %section-title
+    color: rgba(0,0,0,0.1)
+    @include respond-to(tablet-landscape)
+      width: auto
+      margin: 0 0 38px
+  &__list
+    display: flex
+    margin: 0 auto
+    justify-content: flex-start
+    flex-wrap: wrap
+    max-width: 1355px
+    padding: 0 35px
+    box-sizing: border-box
+    @include respond-to(mobile-portrait)
+      padding: 0 15px
+  &__item
+    flex: 0 1 33.3%
+    padding: 25px 13px 0
+    position: relative
+    box-sizing: border-box
+    margin-bottom: 65px
+    @include respond-to(tablet-portrait)
+      margin-bottom: 30px
+    @include respond-to(mobile-landscape)
+      flex: 0 1 50%
+    @include respond-to(mobile-portrait)
+      flex: 0 1 100%
+      margin-bottom: 10px
+  &__logo-wrapper
+    height: 190px
+    display: flex
+    align-items: center
+    justify-content: center
+    border-top: 1px solid #e8e8e8
+    border-bottom: 1px solid #e8e8e8
+    overflow: hidden
+    @include respond-to(tablet-portrait)
+      height: 150px
+    @include respond-to(mobile-portrait)
+      height: 100px
+  &__logo
+    margin: 0 auto
+    max-height: 100%
+    max-width: 100%
+    width: auto
+    height: auto
+  &__text-block
+    padding-top: 30px
+    @include respond-to(mobile-portrait)
+      padding-top: 20px
+  &__program
+    color: $turquoise
+    font-size: 18px
+    display: block
+    margin-bottom: 14px
+    text-decoration: none
+    font-family: 'HarmoniaSansProCyrBold', sans-serif
+  &__sub-title
+    font-size: 26px
+    color: #000
+    font-weight: bold
+    display: block
+    margin-bottom: 30px
+    text-decoration: none
+    &:hover
+      color: $turquoise
+    @include respond-to(tablet-portrait)
+      font-size: 22px
+      margin-bottom: 20px
+    @include respond-to(mobile-portrait)
+      font-size: 18px
+    svg
+      font-size: 0.6em
+      position: relative
+      top: 2px
+      color: rgba(0,0,0,0.2)
+      @include respond-to(tablet-portrait)
+       top: 1px
+  &__data
+    color: rgba(000, 000, 000, 0.3)
+    display: block
+    font-size: 14px
+    @include respond-to(mobile-portrait)
+      font-size: 12px

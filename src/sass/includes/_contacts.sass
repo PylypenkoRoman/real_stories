@@ -1,0 +1,143 @@
+.contacts
+  background: #1a1a1a
+  &__in
+    box-sizing: border-box
+    padding: 116px 36px 115px
+    @include respond-to(desktop)
+      padding: 112px 36px 161px 186px
+    @include respond-to(tablet-landscape)
+      padding: 88px 34px 128px
+    @include respond-to(mobile-landscape)
+      padding: 55px 15px 24px  
+  &__title
+    width: 625px
+    margin: 0 auto 52px
+    color: #fff
+    font-size: 60px
+    @extend %section-title-smaller
+    @include respond-to(tablet-landscape)
+      width: auto
+      margin: 0 0 38px
+  &__list
+    width: 625px
+    margin: 0 auto
+    @include respond-to(tablet-landscape)
+      width: auto
+      margin: 0
+    @include respond-to(mobile-landscape)
+      margin-bottom: 66px
+  &__item
+    color: #fff
+    display: flex
+    align-items: center
+    position: relative
+    box-sizing: border-box
+    @extend %common-text
+    @include respond-to(mobile-landscape)
+      padding-left: 50px
+      line-height: 40px
+      flex-direction: column
+      align-items: flex-start
+      @include respond-to(tablet-landscape)
+        line-height: 24px
+    .divider
+      position: relative
+      height: 24px
+      width: 1px
+      background: transparent
+      padding: 0 15px
+      @include respond-to(mobile-landscape)
+        display: none
+      &:before
+        height: 65px
+        width: 1px
+        position: absolute
+        background: rgba(255,255,255, 0.4)
+        transform: rotate(28deg)
+        content: ""
+        top: 50%
+        margin-top: -37px
+  &__link
+    position: relative
+    color: #fff
+    text-decoration: none
+    &:after
+      content: ""
+      bottom: 0
+      height: 1px
+      background: $turquoise
+      width: 0
+      transition: 0.4s
+      position: absolute
+      left: 0
+    &:hover
+      color: $turquoise
+      &:after
+        width: 100%
+  &__icon-wrapper
+    @extend %circled-button-bigger
+    background: $orange
+    display: flex
+    border-radius: 50%
+    align-items: center
+    justify-content: center
+    margin-right: 60px
+    @include respond-to(desktop)
+      margin-right: 42px
+    @include respond-to(mobile-landscape)
+      position: absolute
+      top: 0
+      left: 0
+      margin-right: 0
+    svg
+      color: #000
+    .icon-phone
+      font-size: 25px
+      @include respond-to(tablet-landscape)
+        font-size: 21px
+      @include respond-to(mobile-portrait)
+        font-size: 16px
+    .icon-email 
+      font-size: 16px
+      @include respond-to(tablet-landscape)
+        font-size: 13px
+      @include respond-to(mobile-portrait)
+        font-size: 9px
+    .icon-home
+      font-size: 19px
+      @include respond-to(tablet-landscape)
+        font-size: 15px
+      @include respond-to(mobile-portrait)
+        font-size: 12px
+.contacts__item + .contacts__item
+  margin-top: 20px
+  @include respond-to(desktop)
+    margin-top: 18px
+
+.copyright,
+.developer-notes
+  color: rgba(255, 255, 255, 0.07)
+  font-size: 16px
+  display: block
+  @include respond-to(tablet-landscape)
+    font-size: 13px
+
+.copyright
+  position: absolute
+  left: 30px
+  bottom: 24px
+  @include respond-to(tablet-landscape)
+    left: 39px
+  @include respond-to(mobile-landscape)
+    margin-bottom: 11px
+    position: static
+
+.developer-notes
+  position: absolute
+  transform: rotate(-90deg)
+  right: -67px
+  bottom: 127px
+  text-decoration: none
+  @include respond-to(mobile-landscape)
+    position: static
+    transform: rotate(0deg)

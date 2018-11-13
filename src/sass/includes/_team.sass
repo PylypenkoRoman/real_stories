@@ -1,0 +1,146 @@
+.team
+  box-sizing: border-box
+  padding: 100px 0 160px
+  background: $dark-gray
+  @include respond-to(tablet-landscape)
+    padding: 80px 0 60px
+  @include respond-to(mobile-landscape)
+    padding: 55px 0 25px
+  &__title
+    color: #fff
+    margin: 0 0 110px
+    text-align: center
+  &__list
+    display: flex
+    padding: 0 20px
+    margin: 80px auto 0
+    max-width: 1355px
+    justify-content: flex-start
+    flex-wrap: wrap
+    @include respond-to(tablet-landscape)
+      margin: 50px auto 0
+      padding: 0 22px
+    @include respond-to(mobile-landscape)
+      padding: 0
+      margin: 30px auto 0
+  &__paragraph
+    max-width: 530px
+    margin: 0 auto
+    position: relative
+    color: #fff
+    @extend %common-text
+    @include respond-to(tablet-portrait)
+      padding: 0 35px
+    @include respond-to(mobile-landscape)
+      padding: 0 15px
+    .team__comment
+      color: $turquoise
+      font-size: 14px
+      text-transform: uppercase
+      position: absolute
+      top: 0
+      right: 110%
+.member
+  flex: 0 1 33.3%
+  padding: 25px 13px 0
+  position: relative
+  box-sizing: border-box
+  margin-bottom: 65px
+  @include respond-to(tablet-portrait)
+    flex: 0 1 50%
+  @include respond-to(mobile-landscape)
+    flex: 0 1 100%
+    margin-bottom: 30px
+    padding: 25px 15px 0
+  &:before
+    content: ""
+    left: 13px
+    right: 13px
+    height: 1px
+    top: 0
+    position: absolute
+    background: $middle-gray
+    @include respond-to(mobile-portrait)
+      left: 15px
+      right: 15px
+  &__counter
+    position: absolute
+    font-size: 30px
+    left: 13px
+    top: 33px
+    font-weight: bold
+    text-transform: uppercase
+    color: rgba(255, 255, 255, 0.05)
+    font-family: 'QanelasHeavy', sans-serif
+  &__portrait-wrapper
+    width: 194px
+    height: 194px
+    position: relative
+    overflow: hidden
+    margin: 0 auto 22px
+    border-radius: 50%
+    @include respond-to(mobile-landscape)
+      width: 130px
+      height: 130px
+  &__portrait
+    display: block
+    height: 100%
+    width: 100%
+  &__name
+    text-align: center
+    display: block
+    margin-bottom: 10px
+    color: #fff
+    font-size: 26px
+    font-family: 'HarmoniaSansProCyrBold', sans-serif
+    @include respond-to(mobile-landscape)
+      font-size: 22px
+      margin-bottom: 10px
+  &__role
+    text-align: center
+    display: block
+    margin-bottom: 24px
+    font-size: 14px
+    color: $turquoise
+    text-transform: uppercase
+    font-family: 'HarmoniaSansProCyrBold', sans-serif
+  &__text-block
+    padding-top: 21px
+    position: relative
+    font-weight: normal
+    &:before
+      content: ""
+      position: absolute
+      left: 0
+      right: 0
+      height: 1px
+      top: 0
+      background: $middle-gray
+    &:after
+      content: '“'
+      position: absolute
+      left: 0
+      top: 35px
+      color: $turquoise
+      font-size: 50px
+      line-height: 30px
+  &__text
+    padding-left: 30px
+    color: #fff
+    margin: 0
+    position: relative
+    font-size: 20px
+    line-height: 31px
+  @include respond-to(mobile-portrait)
+    font-size: 16px
+    line-height: 23px
+
+.team.team__light-bg
+  background: $light-gray
+  .team__paragraph
+    color: #000
+  .member__text
+    color: rgba(000,000,000, 0.5)
+  .member__name
+    color: #000
+

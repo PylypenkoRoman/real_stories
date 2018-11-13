@@ -1,0 +1,378 @@
+// Media query screen sizes
+$mobile-portrait: 320px
+$mobile-landscape: 480px
+$tablet-portrait: 768px
+$tablet-landscape: 1024px
+$desktop: 1280px
+$middle-desktop: 1366px
+$large-desktop: 1600px
+
+// Color variables
+$turquoise: #7ccbcf
+$dark-gray: #1f1f1f
+$light-gray: #f2f2f2
+$orange: #fe9d58
+$orange-active: #feb658
+$middle-gray: #353535
+
+// Common styles
+html,
+body
+  min-height: 100%
+
+body
+  font-family: 'HarmoniaSansProCyrRegular', sans-serif
+  font-weight: normal
+  position: relative
+  &.overflow-hidden
+      overflow: hidden
+
+
+.wrapper
+  box-sizing: border-box
+  min-height: 100%
+  position: relative
+  transition: 0.4s
+  overflow: hidden
+  &.display-none
+    opacity: 0
+    visibility: hidden
+
+.layout
+  position: relative
+
+p.empty
+  padding: 0
+  margin: 0
+  line-height: 0
+
+.animate-section
+  position: relative
+
+
+@keyframes hover-scale
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.07)
+  100%
+    transform: scale(1)
+
+.hidden-title
+  color: transparent
+  margin: 0
+  padding: 0
+  font-size: 0
+  height: 1px
+  width: 1px
+  visibility: hidden
+  flex: 0
+  position: absolute
+
+.layout
+  position: relative
+
+.logo
+  width: 161px
+  height: 42px
+  background-image: url("../img/logo_white.png")
+  background-size: cover
+  position: relative
+  background-repeat: no-repeat
+  transition: 0.1s
+  z-index: 100
+  @include respond-to(tablet-landscape)
+    width: 126px
+    height: 32px
+  @include respond-to(tablet-portrait)
+    width: 102px
+    height: 26px
+  @include respond-to(mobile-portrait)
+    width: 85px
+    height: 22px
+  &.logo_main-jumbotron
+    width: 235px
+    height: 60px
+    @include respond-to(middle-desktop)
+      width: 161px
+      height: 42px
+    @include respond-to(tablet-landscape)
+      width: 126px
+      height: 32px
+    @include respond-to(tablet-portrait)
+      width: 102px
+      height: 26px
+    @include respond-to(mobile-portrait)
+      width: 85px
+      height: 22px  
+  a
+    display: block
+    height: 100%
+    font-size: 0px
+    color: transparent
+  &.dark
+    background-image: url("../img/logo.png")
+
+.social-media
+  display: flex
+  &__item
+    @extend %circled-button-bigger
+    background: #fff
+    display: flex
+    border-radius: 50%
+    align-items: center
+    justify-content: center
+    transition: 0.4s
+    &:hover
+     background: $turquoise
+     animation: 0.4s ease-in-out hover-scale
+    svg
+      color: #000
+      @include respond-to(mobile-portrait)
+        font-size: 12px
+    &:last-child
+      margin: 0
+.social-media__item + .social-media__item
+  margin-left: 28px
+  @include respond-to(middle-desktop)
+    margin-left: 20px
+  @include respond-to(desktop)
+    margin-left: 8px
+
+.language
+  display: flex
+  &__item
+    font-size: 16px
+    color: #fff
+    text-transform: uppercase
+    cursor: pointer
+    text-decoration: none
+    transition: 0.4s
+    font-family: 'HarmoniaSansProCyrBold', sans-serif
+    &.active, &:hover
+      color: $turquoise
+    @include respond-to(middle-desktop)
+      font-size: 14px
+
+.language__item + .language__item
+  margin-left: 27px
+  @include respond-to(desktop)
+    margin-left: 19px
+
+.controls
+  display: flex
+
+.search-btn
+  @extend %circled-button
+  background: transparent
+  display: flex
+  border-radius: 50%
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  svg
+    color: #fff
+    transition: 0.4s
+    font-size: 28px
+    @include respond-to(middle-desktop)
+      font-size: 22px
+    @include respond-to(mobile-portrait)
+      font-size: 20px
+  &.dark
+    svg
+      color: #000
+  &:hover
+    animation: 0.4s ease-in-out hover-scale
+    svg
+      color: $turquoise
+
+.mobile-nav-btn
+  @extend %circled-button
+  background: $orange
+  display: flex
+  border-radius: 50%
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  transition: 0.4s
+  &.dark
+    .icon-menu
+      background: #f2f2f2
+      &:before, &:after
+        background: #f2f2f2
+
+  .icon-menu
+    background: #000
+    height: 2px
+    width: 14px
+    top: -1px
+    position: relative
+    transform: translateX(4px)
+    @include respond-to(mobile-portrait)
+      height: 1px
+      width: 10px
+      transform: translateX(3px)
+    &:before, &:after
+      background: #000
+      height: 2px
+      width: 14px
+      position: absolute
+      content: ""
+      @include respond-to(mobile-portrait)
+        height: 1px
+        width: 10px
+    &:before
+      top: -5px
+      left: -5px
+      @include respond-to(mobile-portrait)
+        top: -4px
+        left: -4px
+    &:after
+      bottom: -5px
+      left: -4px
+      @include respond-to(mobile-portrait)
+        bottom: -4px
+        left: -3px
+  &:hover
+    background: $orange-active
+    animation: 0.4s ease-in-out hover-scale
+
+.search-btn + .mobile-nav-btn
+  margin-left: 18px
+
+%circled-button  
+  width: 46px
+  height: 46px
+  @include respond-to(middle-desktop)
+    width: 40px
+    height: 40px
+  @include respond-to(mobile-portrait)
+    width: 30px
+    height: 30px
+    svg
+        font-size: 14px
+
+%circled-button-bigger
+  width: 46px
+  height: 46px
+  @include respond-to(middle-desktop)
+    width: 40px
+    height: 40px
+  @include respond-to(mobile-portrait)
+    width: 30px
+    height: 30px
+    svg
+      font-size: 14px
+
+%section-title
+  font-size: 80px
+  font-family: 'QanelasHeavy', sans-serif
+  @include respond-to(tablet-landscape)
+    font-size: 65px
+  @include respond-to(tablet-portrait)
+    font-size: 55px
+  @include respond-to(mobile-portrait)
+    font-size: 30px
+%section-title-smaller
+  font-size: 60px
+  font-family: 'QanelasHeavy', sans-serif
+  @include respond-to(tablet-portrait)
+    font-size: 40px
+  @include respond-to(mobile-portrait)
+    font-size: 27px
+
+.button
+  padding: 10px 15px 10px 20px
+  font-size: 18px
+  height: 46px
+  line-height: 26px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  box-sizing: border-box
+  color: #fff
+  background: $orange
+  border: 0
+  max-width: 287px
+  text-decoration: none
+  position: relative
+  font-family: 'HarmoniaSansProCyrBold', sans-serif
+  &__text
+    z-index: 3
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+  &:after
+    top: 0
+    bottom: 0
+    left: 0
+    content: ""
+    height: 100%
+    background: $orange-active
+    z-index: 2
+    width: 0
+    transition: 0.4s
+    position: absolute
+  @include respond-to(mobile-portrait)
+    width: 100%
+  svg
+    color: #fff
+    margin-left: 20px
+    font-size: 12px
+    @include respond-to(mobile-portrait)
+      margin: 0
+  &:hover:after
+     width: 100%
+
+.look-all-btn
+  max-width: 625px
+  margin: 0 auto
+  @include respond-to(tablet-portrait)
+    max-width: 100%
+  &__link
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    text-decoration: none
+    color: #000
+    transition: 0.4s
+    @extend %common-text
+  &__arrow
+    width: 63px
+    height: 1px
+    background: $orange
+    margin-left: 22px
+    display: block
+    position: relative
+    transition: 0.4s
+    &:before, &:after
+      content: ""
+      width: 6px
+      height: 1px
+      position: absolute
+      right: -1px
+      background: $orange
+      z-index: 2
+    &:before
+      transform: rotate(45deg)
+      top: -2px
+    &:after
+      transform: rotate(-45deg)
+      top: 2px
+  &:hover
+    .look-all-btn__link
+      color: $turquoise
+    .look-all-btn__arrow
+      width: 83px
+
+%common-text
+  font-size: 24px
+  line-height: 36px
+  @include respond-to(tablet-landscape)
+    font-size: 20px
+    line-height: 31px
+  @include respond-to(mobile-portrait)
+    font-size: 16px
+    line-height: 23px

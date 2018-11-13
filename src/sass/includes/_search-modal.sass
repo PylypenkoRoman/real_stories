@@ -1,0 +1,88 @@
+.search-modal
+  z-index: 10
+  position: fixed
+  padding: 20px 46px
+  box-sizing: border-box
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  background: rgba(0, 0, 0, 0.95)
+  overflow: hidden
+  height: 100%
+  visibility: hidden
+  transition: 0.4s
+  opacity: 0
+  @include respond-to(mobile-portrait)
+    padding: 20px 20px 20px 15px
+  &.open
+    visibility: visible
+    opacity: 1
+  &__form
+    max-width: 1400px
+    position: relative
+    width: 100%
+    box-sizing: border-box
+    display: flex
+    justify-content: space-between
+    align-items: center
+    @include respond-to(middle-desktop)
+      max-width: 1200px
+  &__close-btn
+    @extend %circled-button
+    border-radius: 50%
+    background: #fff
+    display: flex
+    align-items: center
+    justify-content: center
+    position: absolute
+    top: 46px
+    right: 46px
+    cursor: pointer
+    @include respond-to(mobile-portrait)
+      top: 20px
+      right: 20px
+    svg
+      font-size: 20px
+      color: #000
+    &:hover
+      animation: 0.4s ease-in-out hover-scale
+  &__search-btn
+    border-radius: 50%
+    background: #4dd8df
+    width: 46px
+    height: 46px
+    display: flex
+    align-items: center
+    justify-content: center
+    border: 0
+    @include respond-to(mobile-portrait)
+      width: 30px
+      height: 30px
+      margin-left: 12px
+    svg
+      color: #fff
+      font-size: 20px
+    &:hover
+      animation: 0.4s ease-in-out hover-scale
+  &__input
+    width: 100%
+    text-align: center
+    flex: 1
+    height: 64px
+    color: #fff
+    border: 0
+    outline: none
+    line-height: 64px
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+    background: transparent
+    font-size: 26px
+    text-transform: uppercase
+    @include respond-to(mobile-landscape)
+      text-align: left
+      font-size: 16px
+      height: 30px
+      line-height: 30px

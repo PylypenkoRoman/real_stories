@@ -1,0 +1,42 @@
+.number-slider
+  flex: 0 1 auto
+  margin: 0 auto 30px
+  box-sizing: border-box
+  width: 630px
+  padding-left: 115px
+  @include respond-to(tablet-landscape)
+    width: 554px
+    padding-left: 82px
+  @include respond-to(tablet-portrait)
+    padding-left: 120px
+    width: 100%
+  @include respond-to(mobile-landscape)
+    padding-left: 0
+  @include respond-to(mobile-portrait)
+    margin-bottom: 35px
+  &__slides-holder
+    overflow-y: auto
+  &__item
+    height: 300px
+    @include respond-to(tablet-landscape)
+      height: 230px
+    @include respond-to(tablet-portrait)
+      height: 190px
+  &__counter
+    font-size: 242px
+    display: block
+    color: $orange
+    line-height: 1
+    font-weight: bold
+    letter-spacing: 0.025em
+    font-family: 'HarmoniaSansProCyrBlack', sans-serif
+    @include respond-to(tablet-landscape)
+      font-size: 170px
+    @include respond-to(tablet-portrait)
+      font-size: 130px
+  &__text
+    display: block
+    font-size: 14px
+    line-height: 22px
+    color: #fff
+    max-width: 200px

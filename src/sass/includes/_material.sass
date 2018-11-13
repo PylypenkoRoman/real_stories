@@ -1,0 +1,221 @@
+.material
+  padding: 100px 35px 135px
+  position: relative
+  overflow: hidden
+  box-sizing: border-box
+  background: $light-gray
+  @include respond-to(mobile-landscape)
+    padding: 63px 15px 50px
+  @include respond-to(mobile-portrait)
+    padding: 80px 15px 50px
+  &__bg
+    z-index: 2
+    top: 0
+    left: 0
+    right: 0
+    position: absolute
+    background-color: $light-gray
+    background-repeat: no-repeat
+    background-image: url("../img/article_big.jpg")
+    background-position: top center
+    background-size: 100% auto
+    -webkit-filter: blur(5px)
+    -moz-filter: blur(5px)
+    -o-filter: blur(5px)
+    -ms-filter: blur(5px)
+    filter: blur(5px)
+    width: 100%
+    height: 700px
+    @include respond-to(tablet-portrait)
+      height: 600px
+      background-size: cover
+    @include respond-to(mobile-landscape)
+      height: 500px
+    @include respond-to(mobile-portrait)
+      height: auto
+      width: auto
+      top: -10px
+      left: -10px
+      right: -10px
+      bottom: -10px
+  &__in
+    margin: 0 auto
+    max-width: 1075px
+    display: flex
+    flex-direction: column
+    z-index: 2
+    position: relative
+    @include respond-to(tablet-portrait)
+      max-width: 716px
+    @include respond-to(mobile-landscape)
+      max-width: 535px
+  &__all-btn
+    z-index: 5
+    color: rgba(255,255,255, 0.5)
+    margin: 0 auto
+    font-size: 14px
+    text-transform: uppercase
+    text-decoration: none
+    line-height: 20px
+    display: flex
+    align-items: center
+    position: absolute
+    width: 120px
+    left: 50%
+    margin-left: -60px
+    top: 40px
+    transition: 0.4s
+    @include respond-to(mobile-landscape)
+      top: 28px
+    @include respond-to(mobile-portrait)
+      font-size: 11px
+      top: 65px
+    svg
+      position: relative
+      top: -3px
+      margin-right: 10px
+      transition: 0.4s
+      color: rgba(255,255,255,.2)
+      @include respond-to(mobile-landscape)
+        top: -2px
+      @include respond-to(mobile-portrait)
+        margin-right: 7px
+    &:hover
+      color: $turquoise
+      svg
+        color: $turquoise
+    @include respond-to(mobile-landscape)
+        font-size: 12px
+  &__title
+    text-align: center
+    margin: 21px 0 30px
+    color: #fff
+    font-size: 65px
+    line-height: 1.1
+    font-family: 'QanelasHeavy', sans-serif
+    @include respond-to(tablet-portrait)
+      font-size: 55px
+    @include respond-to(mobile-portrait)
+      font-size: 27px
+  &__info
+    border-top: 1px solid rgba(255,255,255, 0.1)
+    padding: 21px 10px 18px
+    box-sizing: border-box
+    display: flex
+    justify-content: center
+    @include respond-to(mobile-landscape)
+      padding: 15px 0
+  &__info-item
+    padding: 0 30px
+    @include respond-to(mobile-landscape)
+      padding: 0 10px
+  &__info-label
+    font-size: 12px
+    color: rgba(255,255,255, 0.3)
+    display: block
+    margin-bottom: 5px
+  &__info-text
+    display: block
+    color: $turquoise
+    font-size: 18px
+    text-decoration: none
+    font-family: 'HarmoniaSansProCyrBold', sans-serif
+    @include respond-to(mobile-landscape)
+      font-size: 14px
+  &__video
+    max-width: 1075px
+    width: 100%
+    height: 600px
+    margin: 0 auto 55px
+    border: 0
+    @include respond-to(tablet-portrait)
+      height: 400px
+      margin: 0 auto 35px
+    @include respond-to(mobile-landscape)
+      height: 300px
+    @include respond-to(mobile-portrait)
+      height: 165px
+      width: 280px
+  &__footer
+    display: flex
+    justify-content: space-between
+    align-items: center
+    @include respond-to(mobile-landscape)
+      flex-direction: column-reverse
+      align-items: flex-start
+    @include respond-to(mobile-portrait)
+      max-width: 300px
+      margin: 0 auto
+      align-items: center
+
+  .all-project-btn
+    background: $turquoise
+    padding: 5px 12px 5px 20px
+    display: flex
+    justify-content: space-between
+    color: #fff
+    align-items: center
+    width: 197px
+    border: 0
+    font-size: 18px
+    text-decoration: none
+    font-family: 'HarmoniaSansProCyrBold', sans-serif
+    height: 46px
+    line-height: 26px
+    box-sizing: border-box
+    position: relative
+    &__text
+      z-index: 3
+      position: relative
+      display: flex
+      justify-content: space-between
+      align-items: center
+      width: 100%
+    @include respond-to(mobile-landscape)
+      margin-bottom: 35px
+    @include respond-to(mobile-landscape)
+      line-height: 24px
+    svg
+      font-size: 12px
+.material__info-item + .material__info-item
+  border-left: 1px solid rgba(255,255,255, 0.1)
+
+.sharing
+  display: flex
+  align-items: center
+  &__text
+    color: #000
+    font-size: 24px
+    margin-right: 20px
+    display: block
+    @include respond-to(mobile-landscape)
+      font-size: 20px
+  &__item
+    border-radius: 50%
+    width: 50px
+    height: 50px
+    display: flex
+    align-items: center
+    justify-content: center
+    border: 1px solid transparent
+    @include respond-to(middle-desktop)
+      width: 40px
+      height: 40px
+      font-size: 12px
+    @include respond-to(mobile-portrait)
+      width: 30px
+      height: 30px
+    &.telegram
+      border-color: rgba(130,203,245, 0.3)
+      svg.icon-telegram
+        color: #0088cc
+    &.twitter
+      border-color: rgba(130,203,245, 0.3)
+      svg.icon-telegram
+        color: #7dbdff
+    &.facebook
+      border-color: rgba(112,140,205, 0.3)
+      svg.icon-facebook
+        color: #708ccd
+.sharing__item + .sharing__item
+  margin-left: 7px

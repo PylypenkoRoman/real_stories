@@ -1,0 +1,273 @@
+.works
+  background: $light-gray
+  padding: 120px 36px 160px
+  margin: 0 auto
+  box-sizing: border-box
+  position: relative
+  @include respond-to(desktop)
+    padding: 90px 30px 160px
+  @include respond-to(tablet-portrait)
+    padding: 90px 30px 90px
+  @include respond-to(mobile-landscape)
+    padding: 60px 15px 60px
+  &__in
+    box-sizing: border-box
+    display: flex
+    flex-wrap: wrap
+    margin: 0 auto
+    position: relative
+    max-width: 1366px
+    @include respond-to(tablet-portrait)
+      align-items: stretch
+      width: 100%   
+  &__title
+    @extend %section-title
+    text-align: center
+    color: $turquoise
+    position: relative
+    margin: 0 0 55px
+.work-card
+  box-sizing: border-box
+  display: inline-block
+  margin-bottom: 54px
+  width: 33.3%
+  max-height: 515px
+  overflow: hidden
+  @include respond-to(desktop)
+    margin-bottom: 54px
+    height: 460px
+  @include respond-to(tablet-portrait)
+    width: 50%
+    height: 400px
+    margin-bottom: 23px
+  @include respond-to(mobile-landscape)
+    margin-bottom: 30px
+    height: 356px
+    width: 100%
+  &__text-block
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: rgba(255, 255, 255, 0.9)
+    padding: 40px 40px 80px
+    box-sizing: border-box
+    transition: 0.4s
+    overflow: hidden
+    transform: translateY(-100%)
+  &__text
+    font-size: 26px
+    margin: 0
+    color: #000
+    font-family: 'HarmoniaSansProCyrBold', sans-serif
+  &__sub-text
+    font-size: 18px
+    color: $turquoise
+    font-family: 'HarmoniaSansProCyrBold', sans-serif
+  &__btn
+    width: 50px
+    height: 50px
+    background: #fff
+    display: flex
+    border-radius: 50%
+    align-items: center
+    justify-content: center
+    position: absolute
+    bottom: 26px
+    left: 29px
+    border: 0
+    svg
+      color: #000
+    &:hover
+      animation: 0.4s ease-in-out hover-scale
+  &__holder
+    position: relative
+    cursor: pointer
+    text-decoration: none
+    align-items: stretch
+    height: 100%
+    display: flex    
+  &__content
+    overflow: hidden
+    position: relative
+    width: 100%
+    @include respond-to(tablet-portrait)
+      height: 100%
+  &__img-wrapper
+    position: relative
+    overflow: hidden
+    height: 100%
+  &__img
+    width: auto
+    height: auto
+    min-height: 100%
+    min-width: 100%
+    display: block
+    position: relative
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+  &__type
+    font-size: 18px
+    top: 123px
+    left: -160px
+    display: block
+    width: 270px
+    text-align: right
+    position: absolute
+    transform: rotate(-90deg)
+    color: $dark-gray
+    @include respond-to(tablet-portrait)
+      right: -160px
+      left: auto
+  &:hover
+    .work-card__text-block
+      transform: translateY(0)  
+  &:nth-child(4n+1)
+    padding-left: 95px
+    padding-right: 15px
+    padding-bottom: 40px
+    @include respond-to(desktop)
+      padding-left: 60px
+      padding-right: 20px
+      padding-bottom: 30px
+    @include respond-to(tablet-portrait)
+      padding-bottom: 40px
+      padding-left: 0
+      padding-right: 70px
+    @include respond-to(mobile-landscape)
+      padding: 0 40px 0 0
+  &:nth-child(4n+2)
+    padding-left: 85px
+    padding-top: 40px
+    width: 66.6%
+    @include respond-to(desktop)
+      padding-left: 60px
+      padding-top: 30px
+    @include respond-to(tablet-portrait)
+      width: 50%
+      padding-top: 40px
+      padding-left: 10px
+      padding-right: 60px
+    @include respond-to(mobile-landscape)
+      padding: 0 40px 0 0
+      width: 100%
+    .work-card__text-block
+      width: 355px
+      transform: translate(-100%, 0)
+      @include respond-to(tablet-portrait)
+        width: 100%
+    .work-card__holder:hover
+      .work-card__text-block
+        transform: translate(0, 0)    
+  &:nth-child(4n+3)
+    padding-right: 93px
+    padding-top: 40px
+    width: 66.6%
+    @include respond-to(desktop)
+      padding-right: 80px
+      padding-top: 30px
+    @include respond-to(tablet-portrait)
+      width: 50%
+      padding-top: 0
+      padding-bottom: 40px
+      padding-left: 0
+      padding-right: 70px
+    @include respond-to(mobile-landscape)
+      padding: 0 40px 0 0
+      width: 100%
+    .works__type
+      right: -171px
+      left: auto
+    .work-card__text-block
+      width: 355px
+      transform: translate(-100%, 0)
+      @include respond-to(tablet-portrait)
+        width: 100%
+    .work-card__holder:hover
+      .work-card__text-block
+        transform: translate(0, 0)    
+  &:nth-child(4n)
+    padding-bottom: 40px
+    padding-right: 82px
+    padding-left: 18px
+    @include respond-to(desktop)
+      padding-right: 60px
+      padding-bottom: 30px
+    @include respond-to(tablet-portrait)
+      padding-top: 40px
+      padding-bottom: 0
+      padding-left: 10px
+      padding-right: 60px
+    @include respond-to(mobile-landscape)
+      padding: 0 40px 0 0
+    .works__type
+      right: -160px
+      left: auto
+.works.works-separated
+  right: 0
+  .works__in
+    right: 0
+  .work-card__img-wrapper  
+    height: 260px
+    margin-bottom: 25px
+    @include respond-to(mobile-portrait)
+      margin-bottom: 15px
+      height: 200px
+  .work-card
+    height: auto
+    flex: 0 1 33%
+    padding: 0 12px !important
+    margin-bottom: 45px
+    width: 33.3%
+    @include respond-to(tablet-portrait)
+      width: 50%
+      flex: 0 1 50%
+      @include respond-to(mobile-landscape)
+        width: 100%
+        flex: 0 1 100%
+        padding: 0 !important
+        margin-bottom: 30px
+    &:nth-child(4n+2),
+    &:nth-child(4n+3)  
+      flex: 0 1 33%
+      width: 33.3%
+      @include respond-to(tablet-portrait)
+        width: 50%
+        flex: 0 1 50%
+      @include respond-to(mobile-landscape)
+        width: 100%
+        flex: 0 1 100%    
+  .work-card__img
+    margin: 0
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+  .work-card__type
+    display: none
+  .work-card__text-block
+    position: static
+    background: transparent
+    padding: 0
+    transform: translateY(0)
+    transition: 0s
+    width: auto
+  .work-card__text
+    font-size: 26px
+    margin-bottom: 15px
+    text-decoration: none
+    @include respond-to(mobile-landscape)
+      margin-bottom: 5px
+      font-size: 24px
+    @include respond-to(mobile-portrait)
+      font-size: 18px
+  .work-card__sub-text
+    font-size: 18px
+    color: $turquoise
+    text-decoration: none
+    @include respond-to(mobile-portrait)
+      font-size: 16px
+  .work-card__btn
+    display: none

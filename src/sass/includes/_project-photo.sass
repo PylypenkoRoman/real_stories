@@ -1,0 +1,125 @@
+.project-photo
+  padding: 80px 0 155px
+  background: $light-gray
+  box-sizing: border-box
+  @include respond-to(tablet-portrait)
+    padding: 50px 0 80px
+  @include respond-to(mobile-portrait)
+      padding: 30px 0 60px
+  &__title
+    text-align: center
+    @extend %section-title
+    color: #dcdcdc
+    margin: 0 0 70px
+    @include respond-to(tablet-portrait)
+      margin: 0 0 50px
+    @include respond-to(mobile-portrait)
+      margin: 0 0 30px
+  &__slider-wrapper
+    position: relative
+    overflow: hidden
+  &__slider
+    margin: 0 auto
+  &__slide
+    overflow: hidden
+    margin: 0 60px
+    box-sizing: border-box
+    float: left
+    position: relative
+    @include respond-to(tablet-landscape)
+      margin: 0 30px
+    @include respond-to(tablet-portrait)
+      margin: 0 15px
+    @include respond-to(mobile-landscape)
+      margin: 0 10px
+    @include respond-to(mobile-portrait)
+      margin: 0 5px
+  &__img
+    height: auto
+    width: 100%
+    max-width: 1200px
+    display: block
+    @include respond-to(large-desktop)
+      max-width: 1076px
+    @include respond-to(tablet-landscape)
+      max-width: 860px
+    @include respond-to(tablet-portrait)
+      max-width: 660px
+    @include respond-to(mobile-landscape)
+      max-width: 380px
+    @include respond-to(mobile-portrait)
+      max-width: 270px
+  &__slider-counter
+    width: 100px
+    height: 50px
+    background: #fff
+    display: flex
+    align-items: center
+    justify-content: center
+    color: #d5d5d5
+    font-size: 18px
+    position: absolute
+    bottom: 0
+    right: 0
+    @include respond-to(mobile-landscape)
+      width: 80px
+      height: 40px
+      font-size: 16px
+    @include respond-to(mobile-portrait)
+      width: 40px
+      height: 20px
+      font-size: 14px
+  &__current-slide  
+    padding-right: 3px
+    display: inline-block
+    color: #1f1f1f    
+  &__slider-quantity
+    padding-left: 3px
+    display: inline-block
+  &__slider-btn
+    background: transparent
+    position: absolute
+    top: 0
+    bottom: 0
+    width: 100px
+    cursor: pointer
+    z-index: 2
+    &:after
+      width: 75px
+      height: 75px
+      position: absolute
+      border-radius: 50%
+      background-color: #fff
+      background-position: center center
+      background-repeat: no-repeat
+      content: ""
+      transition: 0.4s
+      top: 50%
+      margin-top: -37px
+      @include respond-to(tablet-portrait)
+        width: 50px
+        height: 50px
+        margin-top: -25px
+        background-size: 30%
+      @include respond-to(mobile-portrait)
+        width: 40px
+        height: 40px
+        margin-top: -20px
+    &_right
+      right: 0
+      &:after
+        background-image: url("../img/svg/delta_right.svg")
+        right: -10px
+      &:hover:after
+        transform: translateX(-30px)
+        @include respond-to(tablet-portrait)
+          transform: translateX(-15px)
+    &_left
+      left: 0
+      &:after
+        background-image: url("../img/svg/delta_left.svg")
+        left: -10px
+      &:hover:after
+         transform: translateX(30px)
+         @include respond-to(tablet-portrait)
+           transform: translateX(15px)

@@ -1,0 +1,26 @@
+.header
+  height: 80px
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  box-sizing: border-box
+  padding: 17px 33px 17px 50px
+  //padding: 17px 50px
+  display: flex
+  z-index: 3
+  justify-content: space-between
+  @include respond-to(large-desktop)
+    padding: 22px 33px 18px 30px
+    align-items: center
+  @include respond-to(tablet-landscape)
+    padding: 15px 32px
+    height: 70px  
+  @include respond-to(mobile-landscape)
+    padding: 18px 15px
+    height: 66px
+    align-items: center
+  &.header_fixed
+    position: fixed  
+  &__controls
+    display: flex

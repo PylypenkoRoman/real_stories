@@ -1,0 +1,89 @@
+.horizontal-gallery
+  padding: 30px 0
+  box-sizing: border-box
+  margin: 0 auto
+  width: 100%
+  &__content
+    display: flex
+    width: auto
+  &__item
+    margin-right: 25px
+    position: relative
+    width: 525px
+    min-width: 525px
+    height: 400px
+    overflow: hidden
+    @include respond-to(tablet-landscape)
+      width: 390px
+      min-width: 390px
+      height: 290px
+    @include respond-to(tablet-portrait)
+      width: 340px
+      min-width: 340px
+      height: 260px
+    @include respond-to(mobile-landscape)
+      width: 100%
+      min-width: 100%
+      height: auto
+    &:first-child
+      margin-left: 110px
+      @include respond-to(tablet-landscape)
+        margin-left: 82px
+      @include respond-to(tablet-portrait)
+        margin-left: 0
+    &:last-child
+      margin-right: 0
+    &:nth-child(even)
+      margin-bottom: 156px
+      @include respond-to(tablet-portrait)
+        margin-bottom: 100px
+      .horizontal-gallery__counter
+        bottom: -50px
+      @include respond-to(mobile-landscape)
+        margin-bottom: 50px
+    &:nth-child(odd)
+      margin-top: 156px
+      @include respond-to(tablet-portrait)
+        margin-top: 100px
+      .horizontal-gallery__counter
+        top: -50px
+      @include respond-to(mobile-landscape)
+        margin-top: 0
+  &__img-wrapper
+    overflow: hidden
+    position: relative
+    height: 100%   
+  &__img
+    display: block
+    width: auto
+    height: auto
+    min-height: 100%
+    min-width: 100%
+    max-height: 100%
+    position: relative
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+  &__counter
+    position: absolute
+    font-size: 30px
+    font-weight: bold
+    left: 0
+    text-transform: uppercase
+    color: rgba(255, 255, 255, 0.05)
+  &_disabled
+    padding: 0
+    .horizontal-gallery__content
+      display: block
+    .horizontal-gallery__item
+      @include respond-to(mobile-landscape)
+        margin-bottom: 30px
+        margin-top: 0
+    .horizontal-gallery__img
+      width: 100%
+      height: auto
+      top: 0
+      left: 0
+      transform: translate(0, 0)
+    .horizontal-gallery__content
+      display: none

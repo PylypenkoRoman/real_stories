@@ -1,0 +1,44 @@
+.assist
+  display: flex
+  box-sizing: border-box
+  align-items: center
+  justify-content: center
+  background:
+  height: 530px
+  background-repeat: no-repeat
+  background-image: url("../img/assist_bg.jpg")
+  background-position: center center
+  background-size: cover
+  @include respond-to(tablet-landscape)
+    height: 400px
+  @include respond-to(tablet-portrait)
+    height: 360px
+  @include respond-to(mobile-portrait)
+    justify-content: flex-start
+    height: 260px
+  &__in
+    max-width: 635px
+    margin: 0 auto
+    display: flex
+    align-items: flex-start
+    justify-content: center
+    flex-direction: column
+    @include respond-to(tablet-portrait)
+      padding: 0 15px
+    @include respond-to(mobile-portrait)
+      max-width: none
+      margin: 0
+  &__title
+    color: #000
+    margin: 0 0 45px
+    @extend %section-title-smaller
+    @include respond-to(tablet-portrait)
+      margin: 0 0 30px
+    @include respond-to(mobile-portrait)
+      margin: 0 0 20px
+
+.assist.dark
+  background-image: url("../img/assist_bg_dark.jpg")
+  .assist__title
+    color: #fff
+
